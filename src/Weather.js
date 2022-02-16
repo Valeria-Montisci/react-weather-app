@@ -3,8 +3,10 @@ import "./Weather.css";
 export default function Weather()
 {return(
     <div className="Weather">
-        <input type="Search" placeholder="Search a city.." className="search-bar" />
+        <form>
+        <input type="Search" placeholder="Search a city.." autoFocus="on" className="search-bar" />
         <input type="Submit" value="Search" className="search-button"/>
+        </form>
         <h1> Sydney </h1>
         <ul>
             <li> Wednesay 07:00</li>
@@ -14,7 +16,7 @@ export default function Weather()
             <div className="col-6">
                 <img 
                 src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png" alt="cloudy" />
-                6°C
+                <span className="temperature"> 6</span>°<span className="unit">C</span>
             </div>
             <div className="col-6">
                 <ul>
