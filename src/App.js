@@ -1,9 +1,13 @@
 import './App.css';
-
+import Weather  from './Weather';
 function App() {
   return (
     <div className="App container">
-  Weather App
+ <Weather />
+
+
+
+
   <footer>
    Coded by {""}
    <a href='https://tender-hoover-502b0b.netlify.app/' target="_blank"  rel="noreferrer">Valeria Montisci</a> 
