@@ -6,9 +6,9 @@ function App() {
   Weather App
   <footer>
    Coded by {""}
-   <a href='https://tender-hoover-502b0b.netlify.app/' target="_blank">Valeria Montisci</a> 
+   <a href='https://tender-hoover-502b0b.netlify.app/' target="_blank"  rel="noreferrer">Valeria Montisci</a> 
    {""} open-sourced on {""}
-   <a href='https://github.com/Valeria-Montisci/react-weather-app' target="_blank>">Github</a> 
+   <a href='https://github.com/Valeria-Montisci/react-weather-app' target="_blank>" rel="noreferrer">Github</a> 
   </footer>
     </div>
   );
