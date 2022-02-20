@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+import formatDate from "./formatDate";
 import axios from"axios";
 import "./Weather.css";
 export default function Weather(props){
@@ -12,7 +13,7 @@ function handleResponse(response){
         city: response.data.name,
         description : response.data.weather[0].description,
         icon: response.data.weather[0].icon,
-        date: 'Wednesday 07:00',
+        date: new Date (response.data.dt * 1000),
         });
  
 }
@@ -25,7 +26,7 @@ if (weatherData.ready) {
         </form>
         <h1> {weatherData.city} </h1>
         <ul>
-            <li> {weatherData.date} </li>
+            <li> <formatDate date={weatherData.date} /> </li>
             <li> {weatherData.description} </li>
         </ul>
         <div className="row">
