@@ -34,5 +34,5 @@ font-size: 40px;
 margin-left: 10px;
 line-height: 76px;}
 
-.Weather img {
-    margin-top: -23px;}
+.Weather canvas {
+    padding-top: 13px;}
