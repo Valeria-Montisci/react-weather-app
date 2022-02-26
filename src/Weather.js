@@ -31,9 +31,9 @@ function handleCityChange(event) {
 }
 function search(){
   const apiKey="bb06c437b40daca0d85a686b45006e54";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=Sydney&appid=${apiKey}&units=metric`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(handleResponse) ;
-}
+  }
 if (weatherData.ready) {
     return (
     <div className="Weather">

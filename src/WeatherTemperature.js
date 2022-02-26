@@ -15,7 +15,7 @@ return(
     <div className="weatherTemperature">
     <span className="temperature"> {Math.round(props.celsius)}</span>
     <span className="unit">°C | 
-    <a href="/" onClick={(convertToF)}>°F</a></span>
+    <a href="/" onClick={convertToF}>°F</a></span>
     </div>
 );
 }else{
@@ -23,7 +23,7 @@ return(
     return (
     <div className="weatherTemperature">
     <span className="temperature"> {Math.round(fahrenheit)}</span>
-    <a href="/" onClick={(convertToC)}>°C </a> 
+    <a href="/" onClick={convertToC}>°C </a> 
     <span className="unit">| °F </span>
     </div>)
 }
