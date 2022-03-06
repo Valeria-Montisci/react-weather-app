@@ -15,13 +15,19 @@ export default function WeatherForecast(props){
      return (
         <div className="WeatherForecast">
         <div className="row">
-        <div className="col">
-            <WeatherForecastDay data={forecast[0]}/>
+        {forecast.map(function (dailyForecast, index) {
+            if (index < 5) {
+              return (
+        <div className="col" key={index}>
+            <WeatherForecastDay data={dailyForecast}/>
         </div>
-        </div> 
-    </div>
-    )}
- else{
+              );
+          }
+        })}
+        </div>
+        </div>
+     );
+    }else{
      let apiKey='bb06c437b40daca0d85a686b45006e54';
     let lon=props.coord.lon;
     let lat=props.coord.lat;
@@ -29,6 +35,4 @@ export default function WeatherForecast(props){
     axios.get(apiUrl).then(handleResponse);  
     
     return null;
- }
-   
-}
+ }}
