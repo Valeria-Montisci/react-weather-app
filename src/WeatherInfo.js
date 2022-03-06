@@ -13,10 +13,10 @@ export default function weatherInfo(props)
         </ul>
         <div className="row">
             <div className="col-6">
-           <WeatherIcon code={props.data.icon} alt={props.data.description} />     
+           <WeatherIcon code={props.data.icon} alt={props.data.description} size={56} />     
            <WeatherTemperature celsius={props.data.temperature} />
             </div>
-            <div className="col-6">
+            <div className="col-6 ">
                 <ul>
                     <li>
                         Humidity: {props.data.humidity}%

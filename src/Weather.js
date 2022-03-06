@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import WeatherInfo from "./WeatherInfo";
+import WeatherForecast from "./WeatherForecast";
 import axios from"axios";
 import "./Weather.css";
 
@@ -10,6 +11,7 @@ const [city, setCity]= useState(props.defaultCity);
 function handleResponse(response) {
     setWeatherData({
       ready:true,
+      coord: response.data.coord,
         temperature: response.data.main.temp,
         humidity: response.data.main.humidity,
         wind: response.data.wind.speed,
@@ -50,6 +52,7 @@ if (weatherData.ready) {
               className="search-button"/>
         </form>
         <WeatherInfo  data={weatherData}/>
+        <WeatherForecast coord={weatherData.coord} />
    </div>
 );
 }
